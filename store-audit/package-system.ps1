@@ -45,7 +45,10 @@ foreach ($directory in $dataDirectories) {
   if (Test-Path -LiteralPath $sourceDirectory -PathType Container) {
     Get-ChildItem -LiteralPath $sourceDirectory -Recurse -File | Where-Object {
       $_.Name -notlike '*.tmp' -and $_.Name -notlike '*.lock' -and
-      $_.Name -notlike '*.sqlite-wal' -and $_.Name -notlike '*.sqlite-shm'
+      $_.Name -notlike '*.sqlite-wal' -and $_.Name -notlike '*.sqlite-shm' -and
+      $_.FullName -ne (Join-Path $PSScriptRoot 'config\machine-profile.json') -and
+      $_.FullName -notlike (Join-Path $PSScriptRoot 'state\verify-*') -and
+      $_.FullName -notlike (Join-Path $PSScriptRoot 'state\restore-*')
     } | ForEach-Object { $sourceFiles.Add($_.FullName) }
   }
 }
@@ -58,7 +61,12 @@ foreach ($source in $uniqueFiles) {
   $relative = $source.Substring($projectRoot.Length).TrimStart([System.IO.Path]::DirectorySeparatorChar)
   $target = Join-Path $stageRoot $relative
   New-Item -ItemType Directory -Path (Split-Path $target -Parent) -Force | Out-Null
-  Copy-Item -LiteralPath $source -Destination $target -Force
+  if ($relative -eq 'store-audit\db\store-audit.sqlite') {
+    & node (Join-Path $PSScriptRoot 'scripts\create-database-snapshot.cjs') $source $target | Out-Null
+    if ($LASTEXITCODE -ne 0) { throw 'Failed to create a consistent SQLite snapshot.' }
+  } else {
+    Copy-Item -LiteralPath $source -Destination $target -Force
+  }
 }
 
 $manifest = [ordered]@{

@@ -66,8 +66,6 @@ function Wait-ShippingListReady {
   throw 'Shipping order list did not become stable'
 }
 
-& $cli store open --id $storeId --expected-name $storeName | Out-Null
-
 $checkpoint = $null
 if (Test-Path -LiteralPath $checkpointPath) {
   $candidate = Get-Content -LiteralPath $checkpointPath -Raw | ConvertFrom-Json
@@ -77,7 +75,7 @@ if (Test-Path -LiteralPath $checkpointPath) {
 }
 
 if (!$checkpoint) {
-  & $cli page visit --store-id $storeId --url 'https://seller.shopee.tw/portal/sale/order' --wait-until networkidle --timeout 30000 | Out-Null
+  & $cli store open --id $storeId --expected-name $storeName --url 'https://seller.shopee.tw/portal/sale/order' | Out-Null
   $initial = Invoke-PageExec -Script 'JSON.stringify({path:location.pathname})' -TargetId ''
   $targetId = $initial.data.data.targetId
   & $cli page click --store-id $storeId --target-id $targetId --selector '.eds-tabs__nav-tabs > .eds-tabs__nav-tab:nth-of-type(4)' --timeout 10000 | Out-Null

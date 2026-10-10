@@ -19,13 +19,19 @@
 
 程式碼、規格及報表模板使用私有Git倉庫。兩台電腦各自在自己的branch修改，完成後合併到`main`；只有`main`可以更新`VERSION`、`CHANGELOG.md`並產生正式ZIP。
 
-目前專案尚未初始化Git倉庫。初始化後應使用根目錄`.gitignore`，確保SQLite、訂單狀態、歷史原始資料、報表產物及憑證不進入Git。
+專案已使用私有 GitHub 倉庫。開始修改前必須執行 `scripts/start-version-update.ps1`；它會抓取 `origin/main`，確認本機 Commit 與版本等於遠端最新版，並確認目標版本是上一版的直接語意版本後繼。不符合時禁止開始更新。
+
+修改完成後執行 `scripts/record-version-update.ps1` 產生可提交的版本日誌。日誌記錄基線版本、目標版本、基線 Commit、機器 ID、開始與完成時間及驗證結果。發布使用 `scripts/publish-version.ps1`；若另一台電腦已先更新遠端基線，發布會被阻止，必須先同步及重新建立更新鎖。
 
 如果暫時不使用Git，則只能指定一台電腦修改程式；另一台只能安裝其產生的正式版本包。兩邊同時修改後直接覆蓋ZIP無法可靠合併。
 
 ## 店鋪資料如何同步
 
 SQLite以主機為唯一正式資料。同步到副機前先暫停主機採集並完成資料庫檢查，再產生關閉狀態的快照；副機只用快照分析。副機產生的PPT、分析文件或程式修改可以回傳主機，副機SQLite、取件提醒狀態及排程狀態不得覆蓋主機。
+
+正式資料快照使用 `scripts/backup-to-onedrive.ps1`，保存到 OneDrive `ShopOps-Backup/daily/<日期>`，並更新 `latest`。每份快照包含 manifest 與 SHA256；另一台電腦只下載完整快照到本機再開啟。
+
+Codex 定時任務屬於執行電腦與本地聊天環境，不納入 Git 或資料快照。換主機時先將舊機所有任務設為暫停，再在新主機依版本庫中的排程規格重建並啟用。主機角色檔 `machine-profile.json` 必須為 `primary/read_write` 才能啟用採集；副機保持 `secondary/read_only` 且不啟用相同任務。
 
 不得把正在使用的SQLite放進OneDrive、Dropbox、Google Drive或NAS同步資料夾讓兩台同時開啟。檔案同步工具無法合併SQLite交易，可能產生鎖定、回退或損壞。
 

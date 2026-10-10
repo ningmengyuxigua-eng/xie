@@ -29,3 +29,23 @@ npm run validate
 ```
 
 精簡專案狀態位於`store-audit/state/project-context.json`，後續分析應優先讀取此檔案及資料庫彙總，避免載入整份原始資料。商品採集器目前保留但未啟用。
+
+版本更新必須從 GitHub 最新 `main` 開始：
+
+```powershell
+.\store-audit\scripts\start-version-update.ps1 -TargetVersion 1.4.1
+# 完成修改及驗證後
+.\store-audit\scripts\record-version-update.ps1 -Summary "修改摘要"
+```
+
+資料快照備份到 OneDrive：
+
+```powershell
+.\store-audit\scripts\backup-to-onedrive.ps1
+```
+
+另一台電腦還原到新的空目錄：
+
+```powershell
+.\store-audit\scripts\restore-from-onedrive.ps1 -Destination D:\xiapi-restored
+```

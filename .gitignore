@@ -29,7 +29,10 @@ node_modules/
 *.lock
 
 # Accidental browser-console scratch files at repository root
-/({*
+/(\{i
+/(\{name
+/(\{tag
+/(\{text
 /(x.innerText
 /Boolean(*
 /JSON.stringify(*

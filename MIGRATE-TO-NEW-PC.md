@@ -2,7 +2,7 @@
 
 ## 解壓縮
 
-將`shopops-portable-v1.3.0.zip`完整解壓縮到本機資料夾，例如`D:\xiapi`。系統使用相對路徑，也可放在其他磁碟；請勿直接在ZIP內執行。
+從 OneDrive `ShopOps-Backup\latest` 取得 `shopops-data-latest.zip`，或使用版本包 `shopops-portable-v1.4.0.zip`，完整解壓縮到本機資料夾，例如`D:\xiapi`。系統使用相對路徑，也可放在其他磁碟；請勿直接在ZIP內執行。
 
 ## 安裝環境
 
@@ -31,8 +31,10 @@ SQLite完整性應為`ok`，外鍵錯誤為`0`；storeId應為`27857268786685`�
 
 原電腦上的Codex定時任務不會隨ZIP搬移。新電腦驗證手動採集正常後，再重新建立每日廣告分析及商品流量任務。聊聊自動傳訊目前維持關閉。
 
+新電腦的定時任務必須依 `store-audit/docs/24-scheduled-task-migration.md` 重建。啟用新電腦排程前，必須先確認舊電腦的三個任務均為暫停。
+
 若舊電腦仍繼續使用，請依`store-audit/docs/23-two-machine-version-and-data-sync.md`設定一台primary及一台secondary。只有primary可以採集、寫入SQLite、執行排程及發送聊聊。
 
 ## 包含與排除
 
-可攜包包含SQLite、歷史廣告資料、分析結果、PPT／報表、規格、進度、取件提醒狀態及執行腳本。為控制體積，不包含重複備份、完整瀏覽器頁面、舊分發包或任何登入憑證。
+可攜包包含SQLite Schema 8、正式訂單與取件提醒資料表、歷史廣告資料、商品流量、分析結果、PPT／報表、規格、進度及執行腳本。為控制體積，不包含重複備份、完整瀏覽器頁面、舊分發包或任何登入憑證。
