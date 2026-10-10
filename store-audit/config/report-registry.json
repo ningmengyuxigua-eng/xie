@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "storeDisplayPolicy": "Use store_profile.display_name; never expose the internal connection name in reports.",
+  "defaults": {
+    "timezone": "Asia/Taipei",
+    "maxDetailRows": 20,
+    "formats": ["json", "md"],
+    "modelPayload": "summary_plus_top_actions"
+  },
+  "reports": [
+    {"key":"executive_daily","title":"營運總覽日報","module":"overview","cadence":"daily","period":"D-1","enabled":false,"blockedBy":["sales_order_metrics"],"formats":["json","md"]},
+    {"key":"ad_daily","title":"廣告D-1日報","module":"advertising","cadence":"daily","period":"D-1","enabled":true,"blockedBy":[],"formats":["json","md","csv"]},
+    {"key":"ad_rolling_7d","title":"廣告7日趨勢","module":"advertising","cadence":"daily","period":"rolling_7d","enabled":true,"blockedBy":[],"formats":["json","md","csv"]},
+    {"key":"ad_monthly","title":"廣告月報","module":"advertising","cadence":"monthly","period":"calendar_month","enabled":true,"blockedBy":[],"formats":["json","md","csv"]},
+    {"key":"new_product_daily","title":"新品發現日報","module":"product_discovery","cadence":"daily","period":"D-1","enabled":false,"blockedBy":["verified_product_sort_and_collector"],"formats":["json","md","csv"]},
+    {"key":"product_lifecycle_weekly","title":"商品生命週期週報","module":"product_lifecycle","cadence":"weekly","period":"current_and_changes","enabled":false,"blockedBy":["weekly_identity_reconciliation"],"formats":["json","md","csv"]},
+    {"key":"product_traffic_30d","title":"商品自然流量30日報","module":"product_lifecycle","cadence":"weekly","period":"rolling_30d","enabled":false,"blockedBy":["seller_data_center_natural_traffic_30d","traffic_scope_verified"],"formats":["json","md","csv"]},
+    {"key":"product_natural_traffic_60d","title":"商品自然流量60日報","module":"product_lifecycle","cadence":"weekly","period":"rolling_60d","enabled":false,"blockedBy":["seller_data_center_natural_traffic_60d","listing_age","traffic_scope_verified"],"formats":["json","md","csv"]},
+    {"key":"product_performance_diagnostic","title":"商品表現診斷正式報表","module":"product_lifecycle","cadence":"weekly_or_manual","period":"rolling_60d","enabled":false,"blockedBy":["product_report_final_gate"],"formats":["json","md","csv","pdf"]},
+    {"key":"bundle_addon_candidates","title":"組合與加價購候選","module":"promotion","cadence":"weekly_or_manual","period":"rolling_30d","enabled":true,"blockedBy":["profit_guard_for_publish"],"formats":["json","md","csv"]},
+    {"key":"promotion_effectiveness","title":"促銷成效報告","module":"promotion","cadence":"after_campaign","period":"campaign_window","enabled":false,"blockedBy":["order_item_discount_allocation"],"formats":["json","md","csv"]},
+    {"key":"pickup_alert","title":"超過4天未取件提醒","module":"orders","cadence":"daily","period":"open_shipments","enabled":true,"blockedBy":["notification_channel"],"formats":["json","md"]},
+    {"key":"data_quality_daily","title":"資料品質日報","module":"data_quality","cadence":"daily","period":"D-1","enabled":true,"blockedBy":[],"formats":["json","md"]},
+    {"key":"shopee_rule_change","title":"蝦皮台灣規則變更","module":"rules","cadence":"weekly","period":"since_last_check","enabled":false,"blockedBy":["scheduled_rule_refresh"],"formats":["json","md"]},
+    {"key":"profitability","title":"商品與廣告利潤報告","module":"profitability","cadence":"daily_and_monthly","period":"parameterized","enabled":false,"blockedBy":["product_cost","platform_fee","incremental_logistics_cost"],"formats":["json","md","csv"]},
+    {"key":"inventory_risk","title":"庫存與投放風險報告","module":"inventory","cadence":"daily","period":"current","enabled":false,"blockedBy":["inventory_feed","safety_stock"],"formats":["json","md","csv"]}
+  ]
+}

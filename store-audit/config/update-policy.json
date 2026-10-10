@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "blockUpdateOnFailedCheck": true,
+  "requiredBeforeUpdate": [
+    "application_versions_match",
+    "database_integrity_ok",
+    "database_foreign_keys_ok",
+    "database_schema_matches_policy",
+    "store_identity_matches_default",
+    "pre_update_backup_created",
+    "scheduled_collection_paused",
+    "live_store_name_verified"
+  ],
+  "backupPaths": [
+    "store-audit/db/store-audit.sqlite",
+    "store-audit/config",
+    "store-audit/state"
+  ],
+  "postUpdateRequired": [
+    "run_database_migrations",
+    "run_shopops_validate",
+    "verify_store_name_read_only",
+    "run_one_manual_small_batch",
+    "resume_scheduled_tasks"
+  ],
+  "automaticRollback": false
+}

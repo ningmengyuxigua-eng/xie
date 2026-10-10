@@ -1,0 +1,38 @@
+{
+  "version": "1.1.0-draft",
+  "storeId": "27857268786685",
+  "observationFrequency": "weekly",
+  "windowDays": 30,
+  "reviewCandidate": {
+    "views30Max": 0,
+    "sales30Max": 0,
+    "requiresPositiveStock": true,
+    "minimumObservedDays": 30
+  },
+  "strongDelistCandidate": {
+    "minimumCalendarCoverageDays": 60,
+    "minimumCompleteWindows": 2,
+    "minimumDaysBetweenWindows": 30,
+    "requiresNoRecentOrders": true,
+    "requiresNoAdClicksConversionsOrRevenue": true,
+    "requiresNoActivePromotionOrBundle": true,
+    "requiresManualReview": true
+  },
+  "automaticDelistingEnabled": false,
+  "listingTime": {
+    "preferredField": "first_publish_time",
+    "fallbackField": "create_time",
+    "allowFirstSeenFallback": false
+  },
+  "lifecycleStatuses": [
+    "unknown",
+    "draft",
+    "pending_review",
+    "active",
+    "suspended",
+    "delisted",
+    "deleted"
+  ],
+  "retainHistoryAfterDelist": true,
+  "maxConversationItems": 20
+}

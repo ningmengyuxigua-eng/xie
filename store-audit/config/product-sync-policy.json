@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "storeId": "27857268786685",
+  "displayName": "拾味廚房雜貨鋪",
+  "identityKey": ["store_id", "product_id"],
+  "dailyDiscovery": {
+    "enabled": false,
+    "sortMode": "modified_time",
+    "sortModeVerifiedAt": "2026-10-08T14:05:00+08:00",
+    "batchRows": 20,
+    "maxBatches": 5,
+    "knownProductStopThreshold": 40,
+    "fetchExistingDetails": false,
+    "writeExistingUnchanged": false
+  },
+  "weeklyReconciliation": {
+    "enabled": false,
+    "pagesPerRun": 5,
+    "identityOnly": true,
+    "fetchExistingDetails": false,
+    "missingFullScansBeforeReview": 2
+  },
+  "detailQueue": {
+    "batchRows": 20,
+    "maxAttempts": 3,
+    "autoAdvertise": false,
+    "autoPromote": false
+  },
+  "lifecycle": {
+    "listingTimeFieldPriority": ["first_publish_time", "create_time"],
+    "neverSubstituteFirstSeenForListedAt": true,
+    "statusValues": ["unknown", "draft", "pending_review", "active", "suspended", "delisted", "deleted"],
+    "keepHistoryAfterDelist": true,
+    "automaticDelistingEnabled": false,
+    "missingFullScansBeforeReview": 2
+  },
+  "requiredBeforeEnable": [
+    "import_existing_product_baseline_without_refetch",
+    "create_product_discovery_tables",
+    "validate_one_new_product_end_to_end"
+  ]
+}

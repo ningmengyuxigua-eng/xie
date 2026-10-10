@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "contractVersion": "1.1.0",
+  "reportKey": "product_performance_diagnostic",
+  "storeDisplayName": "拾味廚房雜貨鋪",
+  "timezone": "Asia/Taipei",
+  "grain": "one row per store_id + product_id + period_end",
+  "identityKey": ["store_id", "product_id"],
+  "observationKey": ["store_id", "product_id", "metric_date", "traffic_scope"],
+  "trafficScopes": {
+    "legacy_views30": "舊商品清單 views30，來源歸因未確認，只能用於候選篩選",
+    "product_card_total": "賣家數據中心商品流量頁的商品卡總瀏覽與點擊，用於零瀏覽及下架候選篩選",
+    "advertising": "廣告後台曝光、點擊與付費轉換",
+    "unknown": "無法確認來源；不得併入 product_card_total 或 advertising"
+  },
+  "dimensions": [
+    {
+      "group": "identity",
+      "label": "商品身份",
+      "fields": ["store_id", "store_display_name", "product_id", "variation_id", "product_name", "seller_sku"],
+      "requiredFor": ["case", "partial", "final"]
+    },
+    {
+      "group": "lifecycle",
+      "label": "商品生命週期",
+      "fields": ["listing_status", "listed_at", "listing_age_days", "first_seen_at", "last_seen_at"],
+      "requiredFor": ["partial", "final"]
+    },
+    {
+      "group": "taxonomy",
+      "label": "類目與商品角色",
+      "fields": ["category_id", "category_path", "brand", "product_role", "seasonality_tag", "manual_keep_reason"],
+      "requiredFor": ["final"]
+    },
+    {
+      "group": "price_inventory",
+      "label": "價格與庫存",
+      "fields": ["current_price_min", "current_price_max", "reference_price", "stock_qty", "availability_status", "cost_amount", "cost_currency"],
+      "requiredFor": ["partial", "final"]
+    },
+    {
+      "group": "product_card_traffic",
+      "label": "商品卡總流量",
+      "fields": ["product_card_views_d1", "product_card_views_7d", "product_card_views_30d", "product_card_views_60d", "product_clicks_30d", "product_orders_30d", "product_revenue_30d", "product_conversion_rate_30d"],
+      "requiredFor": ["final"]
+    },
+    {
+      "group": "advertising",
+      "label": "廣告",
+      "fields": ["active_ad_status", "active_ad_count", "ad_type", "ad_group_ids", "ad_impressions_7d", "ad_clicks_7d", "ad_ctr_7d", "ad_spend_7d", "ad_orders_7d", "ad_revenue_7d", "ad_roas_7d", "ad_impressions_30d", "ad_clicks_30d", "ad_spend_30d", "ad_orders_30d", "ad_revenue_30d", "ad_roas_30d"],
+      "requiredFor": ["final"]
+    },
+    {
+      "group": "sales",
+      "label": "銷售",
+      "fields": ["units_7d", "units_30d", "units_60d", "orders_30d", "revenue_30d", "sold_total", "refund_units_30d"],
+      "requiredFor": ["partial", "final"]
+    },
+    {
+      "group": "promotion",
+      "label": "促銷與關聯銷售",
+      "fields": ["active_discount", "active_bundle", "active_addon", "active_voucher", "promotion_ids", "bundle_role", "addon_role"],
+      "requiredFor": ["final"]
+    },
+    {
+      "group": "market_fit",
+      "label": "台灣市場適配",
+      "fields": ["tw_keyword_sample", "tw_competitor_sample_size", "tw_price_band_low", "tw_price_band_high", "tw_demand_signal", "localization_issues", "duplicate_product_ids", "market_evidence_at"],
+      "requiredFor": ["final_recommendation"]
+    },
+    {
+      "group": "data_quality",
+      "label": "資料品質與追溯",
+      "fields": ["period_start", "period_end", "data_cutoff_at", "source_name", "source_scope", "coverage_days", "missing_fields", "warnings", "source_fingerprint", "rule_version"],
+      "requiredFor": ["case", "partial", "final"]
+    }
+  ],
+  "requiredFieldSets": {
+    "case": [
+      "store_id", "product_id", "product_name", "period_end", "source_name", "source_scope", "missing_fields", "rule_version"
+    ],
+    "partial": [
+      "store_id", "product_id", "product_name", "listing_status", "listed_at", "current_price_min", "current_price_max", "stock_qty", "units_30d", "sold_total", "period_start", "period_end", "data_cutoff_at", "source_name", "source_scope", "missing_fields", "rule_version"
+    ],
+    "final": [
+      "store_id", "product_id", "product_name", "listing_status", "listed_at", "listing_age_days", "category_id", "category_path", "current_price_min", "current_price_max", "stock_qty", "availability_status", "product_card_views_30d", "product_card_views_60d", "active_ad_status", "active_ad_count", "ad_impressions_7d", "ad_clicks_7d", "ad_spend_7d", "ad_orders_7d", "ad_revenue_7d", "ad_impressions_30d", "ad_clicks_30d", "ad_spend_30d", "ad_orders_30d", "ad_revenue_30d", "units_30d", "units_60d", "sold_total", "active_discount", "active_bundle", "active_addon", "period_start", "period_end", "data_cutoff_at", "source_name", "source_scope", "coverage_days", "missing_fields", "rule_version"
+    ],
+    "final_recommendation": [
+      "cost_amount", "cost_currency", "reference_price", "tw_competitor_sample_size", "tw_price_band_low", "tw_price_band_high", "tw_demand_signal", "market_evidence_at"
+    ]
+  },
+  "generationGates": {
+    "case": {
+      "allowedDataStatuses": ["provisional", "partial"],
+      "allowRecommendations": false,
+      "allowRanking": true,
+      "watermark": "案例／資料未齊"
+    },
+    "partial": {
+      "allowedDataStatuses": ["partial", "revised"],
+      "allowRecommendations": false,
+      "allowRanking": true,
+      "watermark": "部分資料／不得執行"
+    },
+    "final": {
+      "allowedDataStatuses": ["final"],
+      "requiredCoverageDays": 60,
+      "requiredFieldCompleteness": 1.0,
+      "allowRecommendations": true,
+      "allowRanking": true,
+      "watermark": null
+    }
+  },
+  "nullRules": {
+    "missingIsNotZero": true,
+    "notApplicableToken": "not_applicable",
+    "unknownToken": "unknown",
+    "zeroAllowedOnlyWhenSourceComplete": true,
+    "legacyViews30MayNotPopulateProductCardViews": true,
+    "adImpressionsMayNotPopulateProductCardViews": true,
+    "productCardViewsMustRemainSeparateFromAdImpressions": true
+  },
+  "decisionRules": {
+    "newListingObservationDays": 7,
+    "earlyWarningStartDay": 7,
+    "optimizationCandidateStartDay": 30,
+    "longTermProductCardZeroViewDays": 60,
+    "manualDelistReviewOnly": true,
+    "requiredExclusionsBeforeDelistReview": [
+      "data_incomplete", "indexing_failure", "active_ad", "active_promotion", "bundle_or_addon_role", "seasonality", "manual_keep_reason"
+    ]
+  }
+}

@@ -1,0 +1,680 @@
+{
+  "generatedAt": "2026-10-09T05:26:22.837Z",
+  "storeId": "27857268786685",
+  "displayName": "拾味廚房雜貨鋪",
+  "completedDailyExports": 54,
+  "stagedRows": 15415,
+  "matchedRows": 15254,
+  "unmatchedRows": 161,
+  "ambiguousRows": 0,
+  "daily": [
+    {
+      "metricDate": "2026-08-14",
+      "rows": 474,
+      "matched": 474,
+      "unmatched": 0,
+      "ambiguous": 0,
+      "spend": 89.91,
+      "revenue": 146,
+      "conversions": 1
+    },
+    {
+      "metricDate": "2026-08-15",
+      "rows": 637,
+      "matched": 636,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 673.18,
+      "revenue": 2490,
+      "conversions": 5
+    },
+    {
+      "metricDate": "2026-08-16",
+      "rows": 650,
+      "matched": 649,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 1046,
+      "revenue": 1765,
+      "conversions": 10
+    },
+    {
+      "metricDate": "2026-08-17",
+      "rows": 618,
+      "matched": 617,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 501.27,
+      "revenue": 1026,
+      "conversions": 3
+    },
+    {
+      "metricDate": "2026-08-18",
+      "rows": 364,
+      "matched": 363,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 406.91,
+      "revenue": 574,
+      "conversions": 3
+    },
+    {
+      "metricDate": "2026-08-19",
+      "rows": 293,
+      "matched": 292,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 209.8,
+      "revenue": 146,
+      "conversions": 1
+    },
+    {
+      "metricDate": "2026-08-20",
+      "rows": 298,
+      "matched": 297,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 302.46,
+      "revenue": 904,
+      "conversions": 2
+    },
+    {
+      "metricDate": "2026-08-21",
+      "rows": 305,
+      "matched": 302,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 310.15,
+      "revenue": 282,
+      "conversions": 3
+    },
+    {
+      "metricDate": "2026-08-22",
+      "rows": 307,
+      "matched": 304,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 871.57,
+      "revenue": 1350,
+      "conversions": 3
+    },
+    {
+      "metricDate": "2026-08-23",
+      "rows": 247,
+      "matched": 245,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 515.05,
+      "revenue": 583,
+      "conversions": 2
+    },
+    {
+      "metricDate": "2026-08-24",
+      "rows": 22,
+      "matched": 21,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 130.27,
+      "revenue": 1253,
+      "conversions": 6
+    },
+    {
+      "metricDate": "2026-08-25",
+      "rows": 19,
+      "matched": 18,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 63.87,
+      "revenue": 399,
+      "conversions": 2
+    },
+    {
+      "metricDate": "2026-08-26",
+      "rows": 17,
+      "matched": 16,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 110.42,
+      "revenue": 476,
+      "conversions": 3
+    },
+    {
+      "metricDate": "2026-08-27",
+      "rows": 15,
+      "matched": 14,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 17.9,
+      "revenue": 280,
+      "conversions": 1
+    },
+    {
+      "metricDate": "2026-08-28",
+      "rows": 16,
+      "matched": 15,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 5.55,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-08-29",
+      "rows": 15,
+      "matched": 14,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 34.16,
+      "revenue": 290,
+      "conversions": 1
+    },
+    {
+      "metricDate": "2026-08-30",
+      "rows": 16,
+      "matched": 15,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 36.45,
+      "revenue": 758.42,
+      "conversions": 4
+    },
+    {
+      "metricDate": "2026-08-31",
+      "rows": 15,
+      "matched": 14,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 18.43,
+      "revenue": 213,
+      "conversions": 1
+    },
+    {
+      "metricDate": "2026-09-01",
+      "rows": 17,
+      "matched": 16,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 40.94,
+      "revenue": 551,
+      "conversions": 2
+    },
+    {
+      "metricDate": "2026-09-02",
+      "rows": 18,
+      "matched": 17,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 82.95,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-09-03",
+      "rows": 19,
+      "matched": 16,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 33.83,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-09-04",
+      "rows": 18,
+      "matched": 15,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 36.42,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-09-05",
+      "rows": 18,
+      "matched": 15,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 55.28,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-09-06",
+      "rows": 18,
+      "matched": 15,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 94.15,
+      "revenue": 453,
+      "conversions": 2
+    },
+    {
+      "metricDate": "2026-09-07",
+      "rows": 18,
+      "matched": 14,
+      "unmatched": 4,
+      "ambiguous": 0,
+      "spend": 195.52,
+      "revenue": 6652,
+      "conversions": 6
+    },
+    {
+      "metricDate": "2026-09-08",
+      "rows": 18,
+      "matched": 14,
+      "unmatched": 4,
+      "ambiguous": 0,
+      "spend": 312.51,
+      "revenue": 271,
+      "conversions": 1
+    },
+    {
+      "metricDate": "2026-09-09",
+      "rows": 18,
+      "matched": 14,
+      "unmatched": 4,
+      "ambiguous": 0,
+      "spend": 173.78,
+      "revenue": 474,
+      "conversions": 2
+    },
+    {
+      "metricDate": "2026-09-10",
+      "rows": 22,
+      "matched": 19,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 157.22,
+      "revenue": 1424,
+      "conversions": 4
+    },
+    {
+      "metricDate": "2026-09-11",
+      "rows": 21,
+      "matched": 19,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 77.48,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-09-12",
+      "rows": 21,
+      "matched": 19,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 156.97,
+      "revenue": 358,
+      "conversions": 1
+    },
+    {
+      "metricDate": "2026-09-13",
+      "rows": 21,
+      "matched": 19,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 181.53,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-09-14",
+      "rows": 19,
+      "matched": 17,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 38.27,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-09-15",
+      "rows": 17,
+      "matched": 16,
+      "unmatched": 1,
+      "ambiguous": 0,
+      "spend": 116.7,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "metricDate": "2026-09-16",
+      "rows": 271,
+      "matched": 269,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 117.86,
+      "revenue": 3736,
+      "conversions": 5
+    },
+    {
+      "metricDate": "2026-09-17",
+      "rows": 268,
+      "matched": 266,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 197.6,
+      "revenue": 3561,
+      "conversions": 4
+    },
+    {
+      "metricDate": "2026-09-18",
+      "rows": 619,
+      "matched": 616,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 807.6,
+      "revenue": 2159,
+      "conversions": 5
+    },
+    {
+      "metricDate": "2026-09-19",
+      "rows": 751,
+      "matched": 748,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 668.41,
+      "revenue": 3443,
+      "conversions": 9
+    },
+    {
+      "metricDate": "2026-09-20",
+      "rows": 882,
+      "matched": 877,
+      "unmatched": 5,
+      "ambiguous": 0,
+      "spend": 722.93,
+      "revenue": 1760,
+      "conversions": 8
+    },
+    {
+      "metricDate": "2026-09-21",
+      "rows": 974,
+      "matched": 965,
+      "unmatched": 9,
+      "ambiguous": 0,
+      "spend": 1047.88,
+      "revenue": 1568,
+      "conversions": 5
+    },
+    {
+      "metricDate": "2026-09-22",
+      "rows": 997,
+      "matched": 989,
+      "unmatched": 8,
+      "ambiguous": 0,
+      "spend": 886.09,
+      "revenue": 2351,
+      "conversions": 9
+    },
+    {
+      "metricDate": "2026-09-23",
+      "rows": 997,
+      "matched": 989,
+      "unmatched": 8,
+      "ambiguous": 0,
+      "spend": 834.78,
+      "revenue": 1538,
+      "conversions": 8
+    },
+    {
+      "metricDate": "2026-09-24",
+      "rows": 977,
+      "matched": 969,
+      "unmatched": 8,
+      "ambiguous": 0,
+      "spend": 845.65,
+      "revenue": 2408,
+      "conversions": 9
+    },
+    {
+      "metricDate": "2026-09-25",
+      "rows": 1035,
+      "matched": 1027,
+      "unmatched": 8,
+      "ambiguous": 0,
+      "spend": 3132.96,
+      "revenue": 2675,
+      "conversions": 8
+    },
+    {
+      "metricDate": "2026-09-26",
+      "rows": 534,
+      "matched": 528,
+      "unmatched": 6,
+      "ambiguous": 0,
+      "spend": 967.45,
+      "revenue": 3598,
+      "conversions": 19
+    },
+    {
+      "metricDate": "2026-09-27",
+      "rows": 533,
+      "matched": 528,
+      "unmatched": 5,
+      "ambiguous": 0,
+      "spend": 1051.79,
+      "revenue": 712,
+      "conversions": 2
+    },
+    {
+      "metricDate": "2026-09-28",
+      "rows": 534,
+      "matched": 529,
+      "unmatched": 5,
+      "ambiguous": 0,
+      "spend": 1143.04,
+      "revenue": 3287,
+      "conversions": 12
+    },
+    {
+      "metricDate": "2026-09-29",
+      "rows": 535,
+      "matched": 530,
+      "unmatched": 5,
+      "ambiguous": 0,
+      "spend": 1487.46,
+      "revenue": 2554,
+      "conversions": 8
+    },
+    {
+      "metricDate": "2026-09-30",
+      "rows": 180,
+      "matched": 178,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 830.38,
+      "revenue": 3606,
+      "conversions": 11
+    },
+    {
+      "metricDate": "2026-10-01",
+      "rows": 168,
+      "matched": 166,
+      "unmatched": 2,
+      "ambiguous": 0,
+      "spend": 857.34,
+      "revenue": 2723,
+      "conversions": 11
+    },
+    {
+      "metricDate": "2026-10-02",
+      "rows": 148,
+      "matched": 144,
+      "unmatched": 4,
+      "ambiguous": 0,
+      "spend": 417.58,
+      "revenue": 991,
+      "conversions": 3
+    },
+    {
+      "metricDate": "2026-10-03",
+      "rows": 81,
+      "matched": 78,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 684.59,
+      "revenue": 3260.92,
+      "conversions": 15
+    },
+    {
+      "metricDate": "2026-10-04",
+      "rows": 91,
+      "matched": 88,
+      "unmatched": 3,
+      "ambiguous": 0,
+      "spend": 922.79,
+      "revenue": 3677,
+      "conversions": 9
+    },
+    {
+      "metricDate": "2026-10-05",
+      "rows": 108,
+      "matched": 104,
+      "unmatched": 4,
+      "ambiguous": 0,
+      "spend": 719.33,
+      "revenue": 4473,
+      "conversions": 16
+    },
+    {
+      "metricDate": "2026-10-07",
+      "rows": 121,
+      "matched": 115,
+      "unmatched": 6,
+      "ambiguous": 0,
+      "spend": 736.6,
+      "revenue": 2360,
+      "conversions": 9
+    }
+  ],
+  "unmatchedTop20": [
+    {
+      "adName": "自動選品廣告",
+      "days": 27,
+      "spend": 270.52,
+      "revenue": 1662.93,
+      "conversions": 6
+    },
+    {
+      "adName": "🔪三合一壓蒜器 迷你蒜泥器 薑泥研磨器 蒜片切絲器 家用料理備料工具 手動切蒜器 廚房切菜器 蒜末研磨器 多功能料理器",
+      "days": 8,
+      "spend": 234.6,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🧁彩虹戚風蛋糕模 矽膠烤盤模具 4吋6吋慕斯托 烘焙模具 千層蛋糕模 蛋糕烤模 烤箱點心模 [2]",
+      "days": 8,
+      "spend": 147.06,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🍳刮魚鱗器 魚鱗刨 去魚鱗工具 手動魚鱗刷 廚房料理工具 魚類去鱗器 水產處理工具 家用刮鱗器 海鮮處理廚具 [2]",
+      "days": 13,
+      "spend": 92.88,
+      "revenue": 977,
+      "conversions": 4
+    },
+    {
+      "adName": "🍳微波爐蒸籠 專用蒸籠 加熱蒸籠 多層蒸籠 蒸饅頭蒸籠 蒸米飯碗 微波爐加熱容器  微波蒸籠 廚房蒸籠 蒸食容器",
+      "days": 8,
+      "spend": 85,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🔪迷你砧板 塑膠切菜板 水果料理板 寶寶副食品砧板 嬰兒小砧板 家用分類砧板 廚房切水果板 小號中號大號切板 [2]",
+      "days": 2,
+      "spend": 58.98,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🔪雞胸肉分絲器 撕肉器 碎肉器 絞肉機 切肉絲工具 廚房料理器 手動絞餡器 肉類處理器 雞絲刨絲器  食物調理器 [2]",
+      "days": 11,
+      "spend": 48.66,
+      "revenue": 962,
+      "conversions": 2
+    },
+    {
+      "adName": "現貨🔪TPU砧板 切菜板 料理砧板 廚房砧板 水果砧板 案板 家用砧板  輕便加大砧板 生熟食料理板 廚房切菜 [3]",
+      "days": 15,
+      "spend": 46.79,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🥫密封保鮮盒 水果盒 外出便當盒 冰箱食物收納盒 便攜餐盒 防漏收納盒 分類不串味 野餐水果盒 多規格4件組 便當盒 [2]",
+      "days": 3,
+      "spend": 20.5,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🔪手動切麵條機 不鏽鋼切麵器 滾輪切麵刀 手搖麵條機 製麵機 切麵工具  擀麵配件 家用麵條製作 壓麵機 麵食料理工具",
+      "days": 9,
+      "spend": 20.35,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🔪迷你切菜刀 不鏽鋼水果刀 兒童料理刀 寶寶副食品小刀 廚房小菜刀  料理刀具 副食品刀 切菜水果刀 [3]",
+      "days": 12,
+      "spend": 13.8,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🍽️餐墊 杯墊 隔熱墊 防燙餐桌墊 鍋碗盤墊  防油易清潔 餐桌防護墊 餐盤墊 廚房餐桌用品 居家餐廚配件 家用餐墊",
+      "days": 8,
+      "spend": 3.47,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🍳手動蒜泥器 拉繩式食物調理器 廚房切菜器 蒜泥絞肉機 手拉切碎器 家用料理攪碎器  多功能食材攪碎器 料理工具 [2]",
+      "days": 21,
+      "spend": 3.3,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "現貨🔪雙功能削皮器 二合一不鏽鋼蔬果削皮刀 雙頭生薑刮皮刀 廚房刨刀 去皮器 料理切菜工具  家用廚房用具 水果削皮器",
+      "days": 5,
+      "spend": 0,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🍽️餐墊 杯墊 隔熱墊 防燙餐桌墊 鍋碗盤墊  防油易清潔 餐桌防護墊 餐盤墊 廚房餐桌用品 居家餐廚配件 家用餐墊 [3]",
+      "days": 4,
+      "spend": 0,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "現貨🍳窄縫鍋蓋收納墊 檯面鍋蓋放置墊 廚房瀝水架  廚房置物架 瀝水置物架 鍋蓋收納架 桌面廚房可瀝水收納用品",
+      "days": 3,
+      "spend": 0,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "🍽️三層階梯筷子筒 瀝水筷子籠 廚房餐具收納盒  筷子收納桶 餐桌收納架 廚房置物架 加厚PP筷筒 餐具收納架 [3]",
+      "days": 3,
+      "spend": 0,
+      "revenue": 0,
+      "conversions": 0
+    },
+    {
+      "adName": "現貨🍽️食品封口夾 零食密封夾 保鮮夾 廚房封袋夾  密封收納夾 保鮮袋封口夾",
+      "days": 1,
+      "spend": 0,
+      "revenue": 0,
+      "conversions": 0
+    }
+  ]
+}

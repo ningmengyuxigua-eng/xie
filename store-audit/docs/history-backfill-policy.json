@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0-draft",
+  "storeId": "27857268786685",
+  "displayName": "拾味廚房雜貨鋪",
+  "initialRange": {
+    "start": "2026-07-01",
+    "end": "2026-10-05",
+    "startPolicy": "earliest_available_source_data"
+  },
+  "priority": "daily_sync_first",
+  "limits": {
+    "maxDetailRowsPerBatch": 20,
+    "maxPagesPerRun": 20,
+    "maxConcurrentBrowserJobs": 1,
+    "maxSameErrorRetries": 3,
+    "orderWindowDays": 7,
+    "adPreferredChunk": "calendar_month_export"
+  },
+  "storage": {
+    "rawPartition": "backfill/raw/{module}/{yyyy-mm}",
+    "useContentHash": true,
+    "useUpsert": true,
+    "unknownHistoryValue": null
+  },
+  "conversation": {
+    "maxActionItems": 20,
+    "rawDetailsAllowed": false
+  }
+}

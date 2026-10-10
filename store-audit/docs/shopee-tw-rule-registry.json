@@ -1,0 +1,89 @@
+{
+  "market": "TW",
+  "checkedAt": "2026-10-07T00:00:00+08:00",
+  "refreshFrequency": "weekly",
+  "unknownRankingWeightsPolicy": "do_not_invent",
+  "rules": [
+    {
+      "ruleId": "TW-LISTING-ACCURACY",
+      "category": "listing",
+      "title": "商品描述與關鍵字必須準確",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/77364",
+      "sourceAuthority": "official",
+      "enforcementLevel": "block",
+      "affectedModules": ["product_lifecycle", "bundle_addon", "advertising"]
+    },
+    {
+      "ruleId": "TW-LISTING-DUPLICATE",
+      "category": "listing",
+      "title": "相同商品不得重複刊登",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/77364",
+      "sourceAuthority": "official",
+      "enforcementLevel": "block",
+      "affectedModules": ["product_lifecycle", "product_creation"]
+    },
+    {
+      "ruleId": "TW-PRICE-MISLEADING",
+      "category": "pricing",
+      "title": "禁止誤導或不實標價",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/77364",
+      "sourceAuthority": "official",
+      "enforcementLevel": "block",
+      "affectedModules": ["bundle_addon", "promotion_pricing"]
+    },
+    {
+      "ruleId": "TW-PROHIBITED-RESTRICTED-GOODS",
+      "category": "listing",
+      "title": "禁止和限制商品政策",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/77273",
+      "sourceAuthority": "official",
+      "enforcementLevel": "block",
+      "affectedModules": ["product_lifecycle", "bundle_addon", "advertising"]
+    },
+    {
+      "ruleId": "TW-IP-COMPLIANCE",
+      "category": "intellectual_property",
+      "title": "智慧財產權與仿冒品規則",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/77314",
+      "sourceAuthority": "official",
+      "enforcementLevel": "block",
+      "affectedModules": ["product_content", "advertising"]
+    },
+    {
+      "ruleId": "TW-ORDER-NONFULFILLMENT-7D",
+      "category": "fulfillment",
+      "title": "訂單不成立率使用過去七天賣家責任訂單計算",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/126876",
+      "sourceAuthority": "official",
+      "enforcementLevel": "warn",
+      "affectedModules": ["shop_health", "order_monitoring"]
+    },
+    {
+      "ruleId": "TW-LATE-SHIPMENT",
+      "category": "fulfillment",
+      "title": "未在指定備貨期限完成寄件會計入遲延出貨率",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/146427",
+      "sourceAuthority": "official",
+      "enforcementLevel": "warn",
+      "affectedModules": ["shop_health", "order_monitoring"]
+    },
+    {
+      "ruleId": "TW-CHAT-PERFORMANCE",
+      "category": "service",
+      "title": "聊聊表現反映賣家回應買家訊息的頻率",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/126873",
+      "sourceAuthority": "official",
+      "enforcementLevel": "observe",
+      "affectedModules": ["shop_health", "customer_service"]
+    },
+    {
+      "ruleId": "TW-VACATION-SEARCH",
+      "category": "shop_status",
+      "title": "休假模式期間商品無法被搜尋或顯示於分類與熱門標籤",
+      "sourceUrl": "https://help.shopee.tw/portal/4/article/146388",
+      "sourceAuthority": "official",
+      "enforcementLevel": "context",
+      "affectedModules": ["shop_health", "traffic_analysis"]
+    }
+  ]
+}

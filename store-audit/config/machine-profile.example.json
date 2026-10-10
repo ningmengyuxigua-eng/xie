@@ -1,0 +1,9 @@
+{
+  "machineId": "choose-a-unique-machine-id",
+  "role": "primary_or_secondary",
+  "databaseMode": "read_write_or_read_only",
+  "scheduledCollectionEnabled": false,
+  "outboundMessagingEnabled": false,
+  "canonicalDataSource": "primary",
+  "notes": "Copy this file to machine-profile.json on each computer. Do not copy that local file between computers."
+}

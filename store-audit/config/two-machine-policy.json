@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "strategy": "single_writer_two_machine",
+  "roles": {
+    "primary": {
+      "databaseMode": "read_write",
+      "mayCollectLiveData": true,
+      "mayRunScheduledTasks": true,
+      "maySendBuyerMessages": true,
+      "ownsCanonicalDatabase": true
+    },
+    "secondary": {
+      "databaseMode": "read_only_snapshot",
+      "mayCollectLiveData": false,
+      "mayRunScheduledTasks": false,
+      "maySendBuyerMessages": false,
+      "ownsCanonicalDatabase": false,
+      "mayGenerateReports": true,
+      "mayDevelopCode": true
+    }
+  },
+  "codeMerge": {
+    "method": "git_private_repository",
+    "branches": "one_branch_per_machine_or_feature",
+    "releaseSource": "main",
+    "requiredBeforeRelease": ["merge", "pre_update_check", "validate", "package"]
+  },
+  "dataSync": {
+    "direction": "primary_to_secondary",
+    "method": "closed_database_snapshot",
+    "neverSyncLiveSQLiteWith": ["OneDrive", "Dropbox", "GoogleDrive", "NAS_live_file_share"],
+    "secondaryChangesReturnToPrimary": ["code", "documents", "report_templates"],
+    "secondaryChangesNeverReturnToPrimary": ["sqlite_database", "pickup_alert_state", "scheduler_state"]
+  },
+  "futureTwoWriterOption": {
+    "status": "not_implemented",
+    "requires": [
+      "central_database_or_delta_sync_service",
+      "source_machine_id",
+      "idempotent_upsert_keys",
+      "conflict_resolution_by_observed_at",
+      "single_outbound_message_owner"
+    ]
+  }
+}

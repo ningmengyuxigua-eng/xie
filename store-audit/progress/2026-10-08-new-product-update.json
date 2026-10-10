@@ -1,0 +1,36 @@
+{
+  "completedAt": "2026-10-08T14:15:00+08:00",
+  "storeId": "27857268786685",
+  "displayName": "拾味廚房雜貨鋪",
+  "source": {
+    "page": "Shopee我的商品/架上商品",
+    "sortLabel": "以最近排序",
+    "sortParameter": "modified_time",
+    "pageSize": 48,
+    "pagesRead": 1,
+    "storeReportedTotal": 1357
+  },
+  "incrementalResult": {
+    "beforeProducts": 1338,
+    "unknownIdsFound": 19,
+    "detailsRead": 19,
+    "inserted": 19,
+    "afterProducts": 1357,
+    "existingProductsRewritten": 0,
+    "pendingDetailQueue": 0
+  },
+  "listingTime": {
+    "known": 19,
+    "sourceField": "first_publish_time",
+    "listingDateLocal": "2026-10-07",
+    "earliestLocal": "2026-10-07T15:52:58+08:00",
+    "latestLocal": "2026-10-07T22:00:57+08:00"
+  },
+  "validation": {
+    "databaseIntegrity": "ok",
+    "foreignKeyErrors": 0,
+    "priceVersions": 19,
+    "discoveryRunStatus": "complete"
+  },
+  "runId": "product-incremental-2026-10-08-6cef44337e04"
+}

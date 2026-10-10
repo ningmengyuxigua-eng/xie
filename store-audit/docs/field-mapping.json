@@ -1,0 +1,116 @@
+{
+  "version": "0.2-key-validation",
+  "verifiedAt": "2026-10-07",
+  "storeId": "27857268786685",
+  "mappings": {
+    "product": {
+      "source": "seller_product_list",
+      "keyStatus": "verified",
+      "fields": {
+        "product_id": { "sourceLabel": "商品 ID", "type": "text", "status": "verified" },
+        "name": { "sourceLabel": "商品名稱", "type": "text", "status": "verified" },
+        "seller_sku": { "sourceLabel": "主商品貨號", "type": "text", "status": "verified", "isKey": false },
+        "sales_rolling_30d": { "sourceLabel": "過去 30 天銷量", "type": "integer", "status": "verified" },
+        "views_rolling_30d": { "sourceLabel": "過去 30 天瀏覽量", "type": "integer", "status": "verified" },
+        "sold_total": { "sourceLabel": "已售出", "type": "integer", "status": "verified" }
+      }
+    },
+    "variation": {
+      "source": "seller_product_list",
+      "keyStatus": "verified",
+      "fields": {
+        "variation_id": { "sourceLabel": "規格 ID", "type": "text", "status": "verified" },
+        "variation_name": { "sourceLabel": "規格名稱", "type": "text", "status": "verified" },
+        "variation_sku": { "sourceLabel": "商品選項貨號", "type": "text", "status": "verified", "isKey": false }
+      }
+    },
+    "ad": {
+      "source": "seller_ads",
+      "keyStatus": "verified_except_auto_selection",
+      "fields": {
+        "ad_id": { "sourceLabel": "URL path ID", "type": "text", "status": "verified" },
+        "ad_type": { "sourceLabel": "URL path manual/manual-mpd", "type": "enum", "status": "verified" },
+        "source_status": { "sourceLabel": "進行中/暫停中/已結束/已刪除", "type": "text", "status": "verified" },
+        "spend": { "sourceLabel": "花費", "type": "money", "status": "verified" },
+        "attributed_revenue": { "sourceLabel": "銷售額", "type": "money", "status": "verified" },
+        "clicks": { "sourceLabel": "點擊數", "type": "integer", "status": "verified" },
+        "conversions": { "sourceLabel": "轉換數", "type": "integer", "status": "verified" },
+        "roas": { "sourceLabel": "投入產出比", "type": "decimal", "status": "verified" },
+        "period_start": { "sourceLabel": "URL from", "type": "timestamp", "status": "verified" },
+        "period_end": { "sourceLabel": "URL to", "type": "timestamp", "status": "verified" }
+      }
+    },
+    "promotion": {
+      "source": "seller_marketing_activities",
+      "keyStatus": "verified_for_discount_and_bundle",
+      "fields": {
+        "promotion_id": { "sourceLabel": "URL path ID", "type": "text", "status": "verified_for_discount_and_bundle" },
+        "promotion_type": { "sourceLabel": "我的折扣活動/促銷組合/加價購/滿額贈", "type": "enum", "status": "verified" },
+        "status": { "sourceLabel": "活動狀態", "type": "text", "status": "verified" },
+        "start_at": { "sourceLabel": "活動開始時間", "type": "timestamp", "status": "verified" },
+        "end_at": { "sourceLabel": "活動結束時間", "type": "timestamp", "status": "verified" },
+        "product_id": { "sourceLabel": "活動商品連結或 discount API item_id", "type": "text", "status": "verified_for_discount_and_bundle" },
+        "variation_id": { "sourceLabel": "discount API model_id", "type": "text", "status": "verified_for_discount" }
+      }
+    },
+    "voucher": {
+      "source": "seller_voucher_list",
+      "keyStatus": "pending_internal_id",
+      "fields": {
+        "voucher_code": { "sourceLabel": "優惠券代碼", "type": "text", "status": "verified" },
+        "voucher_id": { "sourceLabel": "內部活動 ID", "type": "text", "status": "pending" },
+        "status": { "sourceLabel": "優惠券狀態", "type": "text", "status": "verified" },
+        "scope": { "sourceLabel": "適用商品", "type": "text", "status": "verified" },
+        "discount": { "sourceLabel": "折扣", "type": "money_or_rate", "status": "verified" },
+        "start_at": { "sourceLabel": "開始時間", "type": "timestamp", "status": "verified" },
+        "end_at": { "sourceLabel": "結束時間", "type": "timestamp", "status": "verified" }
+      }
+    },
+    "order": {
+      "source": "seller_order_list_and_detail",
+      "keyStatus": "order_verified_items_pending",
+      "fields": {
+        "order_internal_id": { "sourceLabel": "URL path ID", "type": "text", "status": "verified" },
+        "order_number": { "sourceLabel": "訂單編號", "type": "text", "status": "verified" },
+        "product_id": { "sourceLabel": "商品 ID", "type": "text", "status": "pending_report_validation" },
+        "variation_id": { "sourceLabel": "規格 ID", "type": "text", "status": "pending_report_validation" },
+        "variation_sku": { "sourceLabel": "商品選項貨號", "type": "text", "status": "verified", "isKey": false },
+        "quantity": { "sourceLabel": "數量", "type": "integer", "status": "verified" },
+        "unit_price": { "sourceLabel": "單價", "type": "money", "status": "verified" },
+        "voucher_discount": { "sourceLabel": "優惠券/賣場優惠券", "type": "money", "status": "verified_at_order_level" },
+        "platform_fees": { "sourceLabel": "成交/服務/金流費用", "type": "money", "status": "verified_at_order_level" },
+        "estimated_payout": { "sourceLabel": "預估訂單進帳", "type": "money", "status": "verified" }
+      }
+    },
+    "shipment_event": {
+      "source": "seller_order_detail_or_logistics_api",
+      "keyStatus": "verified_from_order_detail",
+      "fields": {
+        "order_internal_id": { "sourceLabel": "訂單內部 ID", "type": "text", "status": "verified" },
+        "event_code": { "sourceLabel": "由來源狀態標準化的事件代碼", "type": "text", "status": "verified_for_pickup_ready_and_picked_up" },
+        "event_name": { "sourceLabel": "物流狀態", "type": "text", "status": "verified" },
+        "event_at": { "sourceLabel": "物流狀態時間", "type": "timestamp", "status": "verified" },
+        "shipped_at": { "sourceLabel": "完整物流紀錄中的出貨事件時間", "type": "timestamp", "status": "verified" },
+        "pickup_ready_at": { "sourceLabel": "包裹已配達買家取件門市", "type": "timestamp", "status": "verified" },
+        "picked_up_at": { "sourceLabel": "買家取件成功", "type": "timestamp", "status": "verified" }
+      }
+    },
+    "pickup_alert": {
+      "source": "derived",
+      "keyStatus": "rule_and_source_verified",
+      "fields": {
+        "alert_key": { "sourceLabel": "store_id + order_internal_id + pickup_ready_at", "type": "text", "status": "designed" },
+        "due_at": { "sourceLabel": "pickup_ready_at + 4 days", "type": "timestamp", "status": "designed" },
+        "alert_status": { "sourceLabel": "pending/notified/resolved", "type": "enum", "status": "designed" },
+        "notified_at": { "sourceLabel": "提示時間", "type": "timestamp", "status": "designed" }
+      }
+    },
+    "cost": {
+      "source": null,
+      "keyStatus": "missing",
+      "fields": {
+        "unit_cost": { "sourceLabel": null, "type": "money", "status": "missing" }
+      }
+    }
+  }
+}

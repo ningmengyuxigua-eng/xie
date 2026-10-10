@@ -1,0 +1,38 @@
+# Local databases and runtime state
+store-audit/db/*.sqlite
+store-audit/db/*.sqlite-shm
+store-audit/db/*.sqlite-wal
+store-audit/state/
+store-audit/backups/
+store-audit/dist/
+store-audit/config/machine-profile.json
+
+# Collected and generated data
+store-audit/27857268786685/
+store-audit/ad-daily/
+store-audit/backfill/
+store-audit/analysis/
+store-audit/product-report/
+store-audit/reports/
+store-audit/product-traffic/
+store-audit/review/**/raw/
+store-audit/2026-*/
+新店虾皮开店及运营/output/
+
+# Tool caches
+node_modules/
+.codex/
+.agents/
+.ppt-build/
+.chart-data-*/
+*.tmp
+*.lock
+
+# Accidental browser-console scratch files at repository root
+/({*
+/(x.innerText
+/Boolean(*
+/JSON.stringify(*
+/x.*
+/e.children.length
+/0).slice(-60))

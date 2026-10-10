@@ -1,0 +1,19 @@
+{
+  "storeId": "27857268786685",
+  "displayName": "拾味廚房雜貨鋪",
+  "marketplaceAccount": "c8r501xjru",
+  "metricDate": "2026-10-07",
+  "rating": 4.8,
+  "reviewCount": 112,
+  "chatResponseRate": 0.97,
+  "nonFulfillmentRate": 0.02,
+  "liveProducts": 1339,
+  "followers": 23,
+  "joinedText": "3個月前",
+  "operationsStatus": "initial_public_snapshot",
+  "source": {
+    "publicShopUrl": "https://shopee.tw/c8r501xjru",
+    "capturedAt": "2026-10-07T00:00:00+08:00"
+  },
+  "notes": "公開賣場快照只作當日觀測；店鋪權重公式未公開，不由此反推官方權重。"
+}

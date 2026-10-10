@@ -1,0 +1,52 @@
+{
+  "baselineVersion": "1.0-mvp-baseline",
+  "storeId": "27857268786685",
+  "storeDisplayName": "拾味廚房雜貨鋪",
+  "timezone": "Asia/Taipei",
+  "batchLimits": {
+    "detailRows": 20,
+    "productTrafficRowsPerDay": 200,
+    "productTrafficBatchesPerDay": 10,
+    "datesPerBackfillRun": 5,
+    "modelRows": 20,
+    "modelTextCharacters": 3000,
+    "sameErrorRetries": 3
+  },
+  "automation": {
+    "schedulerEnabled": true,
+    "notificationsEnabled": true,
+    "storeMutationEnabled": false,
+    "dailyAdAnalysis": {
+      "automationId": "automation-2",
+      "schedule": "daily 09:30",
+      "timezone": "Asia/Taipei",
+      "scope": "D-1 active ads",
+      "status": "ACTIVE"
+    },
+    "dailyProductTraffic": {
+      "automationId": "automation-3",
+      "schedule": "daily 10:30",
+      "timezone": "Asia/Taipei",
+      "maxProductsPerDay": 200,
+      "batchSize": 20,
+      "maxDetailProductsPerDay": 20,
+      "estimatedFullCycleDays": 7,
+      "trafficMetric": {
+        "primary": "natural_product_views",
+        "dailySource": "shopee_seller_data_center",
+        "rollingWindowsDays": [30, 60],
+        "excludeAdvertisingImpressions": true,
+        "longTermZeroViewDays": 60,
+        "minimumListingAgeDays": 60
+      },
+      "analysisStages": [
+        "zero_view_screening",
+        "seller_data_center_funnel",
+        "advertising_check",
+        "taiwan_buyer_fit",
+        "product_value_review"
+      ],
+      "status": "ACTIVE"
+    }
+  }
+}

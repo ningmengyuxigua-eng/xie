@@ -1,0 +1,24 @@
+{
+  "baselineVersion": "1.0-mvp-baseline",
+  "implementedAt": "2026-10-08T12:00:00+08:00",
+  "storeId": "27857268786685",
+  "displayName": "拾味廚房雜貨鋪",
+  "databaseSchemaVersion": 5,
+  "databaseIntegrity": "ok",
+  "reportDefinitions": 12,
+  "generatedReportTypes": ["ad_daily", "data_quality_daily"],
+  "idempotency": {
+    "metricDate": "2026-10-07",
+    "sourceRows": 121,
+    "secondRunInserted": 0,
+    "secondRunUpdated": 0,
+    "secondRunDuplicates": 121,
+    "reportRunsAfterSecondRun": 4,
+    "reportArtifactsAfterSecondRun": 12
+  },
+  "automation": {
+    "schedulerEnabled": false,
+    "notificationsEnabled": false,
+    "storeMutationEnabled": false
+  }
+}

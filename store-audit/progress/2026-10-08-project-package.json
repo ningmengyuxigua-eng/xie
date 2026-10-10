@@ -1,0 +1,10 @@
+{
+  "implementedAt": "2026-10-08T13:00:00+08:00",
+  "displayName": "拾味廚房雜貨鋪",
+  "entryPoint": "D:\\xiapi\\shopops.cmd",
+  "commands": ["status", "context", "migrate", "reports-sync", "product-import", "product-baseline", "product-status", "validate"],
+  "compactContext": ["state/project-context.json", "state/project-context.md"],
+  "collectorEnabled": false,
+  "schedulerEnabled": false,
+  "portablePackage": "dist/shopops-system-v1.1.0.zip"
+}

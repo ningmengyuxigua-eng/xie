@@ -1,0 +1,13 @@
+{
+  "name": "xiapi-shop-operations",
+  "private": true,
+  "version": "1.3.0",
+  "scripts": {
+    "shopops": "node store-audit/shopops.cjs",
+    "status": "node store-audit/shopops.cjs status",
+    "context": "node store-audit/shopops.cjs context",
+    "validate": "node store-audit/shopops.cjs validate",
+    "version-info": "node store-audit/shopops.cjs version",
+    "pre-update": "node store-audit/shopops.cjs pre-update"
+  }
+}

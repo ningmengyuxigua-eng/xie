@@ -1,0 +1,24 @@
+{
+  "applicationVersion": "1.3.0",
+  "releaseChannel": "stable",
+  "databaseSchemaVersion": 7,
+  "dataCompatibility": {
+    "preserveOnUpgrade": [
+      "store-audit/db/store-audit.sqlite",
+      "store-audit/state",
+      "store-audit/config/store-profile.json",
+      "store-audit/config/pickup-message-policy.json",
+      "store-audit/backfill",
+      "store-audit/analysis",
+      "store-audit/reports",
+      "store-audit/product-traffic"
+    ],
+    "upgradeDatabaseWith": "store-audit/db/migrate.cjs",
+    "backupBeforeUpgrade": true
+  },
+  "minimumRuntime": {
+    "node": "22.5.0",
+    "recommendedNodeMajor": 24,
+    "powershell": "5.1"
+  }
+}

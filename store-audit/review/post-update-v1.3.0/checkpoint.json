@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "storeId": "27857268786685",
+  "storeDisplayName": "拾味廚房雜貨鋪",
+  "sourceStoreName": "xie1",
+  "dateFrom": "2026-10-09",
+  "dateTo": "2026-10-09",
+  "pageSize": 20,
+  "days": {
+    "2026-10-09": {
+      "status": "partial",
+      "total": 709,
+      "expectedPages": 36.0,
+      "completedPages": [
+        1
+      ],
+      "startedAt": "2026-10-10T14:46:24.3963374+08:00",
+      "completedAt": null,
+      "lastError": null
+    }
+  },
+  "updatedAt": "2026-10-10T14:46:25.3871229+08:00"
+}

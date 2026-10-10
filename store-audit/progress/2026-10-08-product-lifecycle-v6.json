@@ -1,0 +1,38 @@
+{
+  "implementedAt": "2026-10-08T12:45:00+08:00",
+  "storeId": "27857268786685",
+  "displayName": "拾味廚房雜貨鋪",
+  "databaseSchemaVersion": 6,
+  "sourceSnapshot": "2026-10-06/products.json",
+  "baseline": {
+    "products": 1338,
+    "observations": 1338,
+    "versions": 1338,
+    "discoveryEvents": 1338,
+    "lifecycleEvents": 1338,
+    "listedAtKnown": 0,
+    "detailQueue": 0,
+    "batchSize": 20
+  },
+  "listingTime": {
+    "apiFieldsVerified": ["first_publish_time", "create_time"],
+    "preferredField": "first_publish_time",
+    "firstSeenFallbackAllowed": false,
+    "oldProductBulkRefetch": false
+  },
+  "incrementalPolicy": {
+    "identityKey": ["store_id", "product_id"],
+    "existingProductAction": "skip_without_detail_or_rewrite",
+    "newProductAction": "insert_and_enqueue_detail",
+    "lifecycleHistoryRetainedAfterDelist": true,
+    "automaticDelistingEnabled": false
+  },
+  "validation": {
+    "baselineSecondImport": "already_imported",
+    "existingProductWasNotOverwritten": true,
+    "newProductWasQueued": true,
+    "listingTimestampWasParsed": true,
+    "delistAndRelistEventsWereRecorded": true
+  },
+  "nextStep": "implement_and_validate_the_daily_sorted_product_list_collector"
+}

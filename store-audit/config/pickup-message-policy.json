@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "storeId": "27857268786685",
+  "storeDisplayName": "拾味廚房雜貨鋪",
+  "sendMode": "manual_copy",
+  "defaultTemplateKey": "gentle",
+  "allowPerOrderTemplateOverride": true,
+  "automaticSendingEnabled": false,
+  "eligibility": {
+    "minimumWaitingDays": 4,
+    "requiredOrderState": "shipped",
+    "requiredLogisticsEvent": "pickup_ready",
+    "excludeResolvedOrders": true
+  },
+  "deliverySafety": {
+    "dedupeKey": "alert_key+template_key",
+    "recheckBeforeSend": true,
+    "requireStableOrderChatLink": true,
+    "onChatLinkFailure": "queue_for_manual_review",
+    "maxOrdersPerRun": 20
+  },
+  "templates": [
+    {
+      "key": "gentle",
+      "label": "溫和提醒版",
+      "recommendedUse": "第一次提醒",
+      "enabled": true
+    },
+    {
+      "key": "consequence",
+      "label": "後果提醒版",
+      "recommendedUse": "接近取件期限或人工判斷需要加強提醒",
+      "enabled": true
+    }
+  ]
+}

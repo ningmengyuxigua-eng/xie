@@ -1,0 +1,51 @@
+{
+  "identity": {
+    "storeId": "27857268786685",
+    "storeDisplayName": "拾味廚房雜貨鋪",
+    "reportKey": "ad_daily",
+    "definitionVersion": 1,
+    "periodStart": "2026-10-07",
+    "periodEnd": "2026-10-07",
+    "dataCutoffAt": "2026-10-08T09:00:00+08:00",
+    "dataStatus": "provisional"
+  },
+  "summary": {
+    "headline": "昨日廣告表現與優先處理項",
+    "metrics": [
+      {"key":"spend","label":"廣告花費","value":0,"unit":"TWD","comparison":null},
+      {"key":"revenue","label":"廣告營收","value":0,"unit":"TWD","comparison":null},
+      {"key":"roas","label":"ROAS","value":0,"unit":"ratio","comparison":null}
+    ]
+  },
+  "actions": [
+    {
+      "entityType": "ad",
+      "entityId": "example",
+      "priority": 3,
+      "status": "review_required",
+      "reason": "範例原因",
+      "recommendation": "範例建議",
+      "risk": "範例風險",
+      "evidencePeriod": "rolling_7d"
+    }
+  ],
+  "opportunities": [],
+  "dataQuality": {
+    "isComplete": true,
+    "missingDates": [],
+    "unmatchedRows": 0,
+    "warnings": []
+  },
+  "execution": {
+    "state": "not_executed",
+    "approvalRequired": true,
+    "approvedBy": null,
+    "executedAt": null
+  },
+  "traceability": {
+    "runId": "example-run-id",
+    "ruleVersion": "example-rule-version",
+    "sourceFingerprint": "sha256:example",
+    "generatedAt": "2026-10-08T09:05:00+08:00"
+  }
+}

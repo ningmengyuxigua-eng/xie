@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0-draft",
+  "timezone": "Asia/Taipei",
+  "dailyWindow": "previous_calendar_day",
+  "initialRunStatus": "provisional",
+  "revisionLagDays": 3,
+  "scope": {
+    "reportStatuses": ["進行中"],
+    "retainYesterdaySpendFromNonActiveAdsForAudit": true,
+    "adTypes": ["single_product", "manual_mpd"]
+  },
+  "sampleRules": {
+    "minImpressionsForCtr": 200,
+    "lowCtrRelativeToTypeMedian": 0.5,
+    "minClicksForConversionWarning": 15,
+    "minClicksForHighPriorityNoConversion": 20,
+    "consecutiveZeroImpressionDays": 2,
+    "consecutiveBadFinalizedDaysBeforeAction": 2
+  },
+  "profitRules": {
+    "requiresCostData": true,
+    "breakEvenRoasFormula": "1 / contribution_margin_rate_after_platform_fee_and_incremental_shipping",
+    "fallback": "traffic_and_conversion_efficiency_only"
+  },
+  "output": {
+    "maxItemsInConversation": 20,
+    "rawStorage": "store-audit/ad-daily/YYYY-MM-DD",
+    "scheduleEnabled": false,
+    "notificationEnabled": false,
+    "automaticAdMutationEnabled": false
+  }
+}
